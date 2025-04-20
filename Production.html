@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="">
+
+    <!-- Title  -->
+    <title>Krishna Textiles - Production</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/imgs/icon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+
+    <!-- Custom Production Page CSS -->
+    <style>
+        .video-carousel {
+            position: relative;
+            height: 75vh;
+            overflow: hidden;
+        }
+        
+        .video-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .video-slide.active {
+            opacity: 1;
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background-color: #fff;
+        }
+        
+        .production-feature {
+            padding: 80px 0;
+        }
+        
+        .production-item {
+            margin-bottom: 50px;
+        }
+        
+        .production-img {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .production-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .production-item:hover .production-img img {
+            transform: scale(1.05);
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .video-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            width: 80%;
+        }
+        
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="sub-bg">
+
+    <!-- ==================== Start Loading ==================== -->
+
+    <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+
+        <div class="loader-wrap-heading">
+            <div class="load-text">
+                <span>K</span>
+                <span>R</span>
+                <span>I</span>
+                <span>S</span>
+                <span>H</span>
+                <span>N</span>
+                <span>A</span>
+                <span>T</span>
+                <span>E</span>
+                <span>X</span>
+                <span>T</span>
+                <span>L</span>
+                <span>E</span>
+                <span>S</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== End Loading ==================== -->
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar nav-crev navbar-expand-lg">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="logo icon-img-100" href="index.html">
+                <img src="assets/imgs/krishna-logo-white.png" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="index.html" role="button" aria-haspopup="true"
+                            aria-expanded="false"><span class="rolling-text">Home</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Company</span></a>
+                       <div class="dropdown-menu">
+                        <a class="dropdown-item" href="about.html">About Us</a>
+                        <a class="dropdown-item" href="FAQ%3bs.html">FAQ'S</a>
+                        <a class="dropdown-item" href="careers.html">Career</a>
+                    </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="product.html" role="button" aria-haspopup="true"
+                            aria-expanded="false"><span class="rolling-text">Products</span></a>   
+                    </li>
+                    <li class="nav-item dropdown">
+                       <a class="nav-link" href="krishnastudio.html" role="button" aria-haspopup="true"
+                            aria-expanded="false"><span class="rolling-text">Krishna Studio</span></a>  
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="production.html" role="button" aria-haspopup="true"
+                            aria-expanded="false"><span class="rolling-text">Production</span></a>  
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="certifications.html" role="button"
+                            aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Certifications </span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="ESG.html" role="button" aria-haspopup="true"
+                            aria-expanded="false"><span class="rolling-text">ESG </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contect.html" aria-haspopup="true"
+                        aria-expanded="false"><span class="rolling-text">Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+    <main class="main-bg">
+
+        <!-- ==================== Start Video Carousel ==================== -->
+        
+        <div class="video-carousel">
+            <div class="video-slide active">
+                <div class="video-overlay"></div>
+                <video autoplay muted loop>
+                    <source src="assets/videos/production-video1.mp4" type="video/mp4">
+                </video>
+                <div class="video-content">
+                    <h1 class="fz-70">State-of-the-Art Production</h1>
+                    <p class="fz-18">Experience our advanced manufacturing facilities with cutting-edge technology</p>
+                </div>
+            </div>
+            <div class="video-slide">
+                <div class="video-overlay"></div>
+                <video autoplay muted loop>
+                    <source src="assets/videos/production-video2.mp4" type="video/mp4">
+                </video>
+                <div class="video-content">
+                    <h1 class="fz-70">Quality Control Excellence</h1>
+                    <p class="fz-18">Our rigorous quality assurance process ensures premium textile products</p>
+                </div>
+            </div>
+            <div class="video-slide">
+                <div class="video-overlay"></div>
+                <video autoplay muted loop>
+                    <source src="assets/videos/production-video3.mp4" type="video/mp4">
+                </video>
+                <div class="video-content">
+                    <h1 class="fz-70">Sustainable Manufacturing</h1>
+                    <p class="fz-18">Creating beautiful textiles while preserving our environment for future generations</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <div class="carousel-dot active" data-slide="0"></div>
+                <div class="carousel-dot" data-slide="1"></div>
+                <div class="carousel-dot" data-slide="2"></div>
+            </div>
+        </div>
+
+        <!-- ==================== End Video Carousel ==================== -->
+
+        <!-- ==================== Start marq ==================== -->
+
+        <section class="serv-marq ontop">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-marq xlrg text-u">
+                            <div class="slide-har st1 non-strok">
+                                <div class="box">
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h4>Our <span class="stroke opacity-4">Production</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End marq ==================== -->
+
+        <!-- ==================== Start Production Features ==================== -->
+
+        <section class="production-feature section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="sec-head mb-80">
+                            <h6 class="sub-title wow fadeInUp">Production Excellence</h6>
+                            <h2 class="fz-50 d-rotate wow">
+                                <span class="rotate-text">Our Manufacturing Capabilities</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row production-item">
+                    <div class="col-lg-6 valign">
+                        <div class="content md-mb50">
+                            <h4 class="mb-20">Advanced Machinery</h4>
+                            <p style="text-align: justify;" class="fz-18">Krishna Textiles utilizes state-of-the-art machinery and equipment in our production facilities. Our advanced looms and spinning units are capable of producing high-quality textiles with precision and efficiency. We continuously invest in the latest technology to ensure that our production processes remain at the cutting edge of the textile industry.</p>
+                            <ul class="rest list-arrow mt-30">
+                                <li>Modern high-speed spinning machines</li>
+                                <li>Computerized weaving looms</li>
+                                <li>Advanced dyeing technology</li>
+                                <li>Automated quality control systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="production-img">
+                            <img src="assets/imgs/production/machinery.jpg" alt="Advanced Machinery">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row production-item">
+                    <div class="col-lg-6">
+                        <div class="production-img">
+                            <img src="assets/imgs/production/quality-control.jpg" alt="Quality Control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 valign">
+                        <div class="content">
+                            <h4 class="mb-20">Quality Control Processes</h4>
+                            <p style="text-align: justify;" class="fz-18">Quality is at the heart of everything we do at Krishna Textiles. Our comprehensive quality control processes ensure that every product that leaves our facility meets our exacting standards. From raw material inspection to final product testing, our dedicated quality assurance team maintains vigilant oversight at each step of the production process.</p>
+                            <ul class="rest list-arrow mt-30">
+                                <li>Multi-point inspection system</li>
+                                <li>Rigorous testing protocols</li>
+                                <li>Continuous process improvement</li>
+                                <li>International quality standards compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row production-item">
+                    <div class="col-lg-6 valign">
+                        <div class="content md-mb50">
+                            <h4 class="mb-20">Sustainable Production</h4>
+                            <p style="text-align: justify;" class="fz-18">Environmental responsibility is a core value at Krishna Textiles. Our sustainable production practices aim to minimize our ecological footprint while maximizing efficiency. From water recycling systems to energy-efficient machinery, we're committed to creating beautiful textiles in harmony with nature.</p>
+                            <ul class="rest list-arrow mt-30">
+                                <li>Solar-powered production facilities</li>
+                                <li>Water conservation and recycling</li>
+                                <li>Eco-friendly dyes and chemicals</li>
+                                <li>Waste reduction initiatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="production-img">
+                            <img src="assets/imgs/production/sustainable.jpg" alt="Sustainable Production">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row production-item">
+                    <div class="col-lg-6">
+                        <div class="production-img">
+                            <img src="assets/imgs/production/skilled-workforce.jpg" alt="Skilled Workforce">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 valign">
+                        <div class="content">
+                            <h4 class="mb-20">Skilled Workforce</h4>
+                            <p style="text-align: justify;" class="fz-18">Behind our exceptional textiles is our talented team of skilled professionals. From experienced technicians to master weavers, our workforce combines traditional craftsmanship with modern techniques to create fabrics of unparalleled quality. Regular training ensures our team stays at the forefront of textile innovation.</p>
+                            <ul class="rest list-arrow mt-30">
+                                <li>Highly trained textile specialists</li>
+                                <li>Continuous professional development</li>
+                                <li>Blend of traditional expertise and modern skills</li>
+                                <li>Focus on craftsmanship and attention to detail</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End Production Features ==================== -->
+
+    </main>
+
+    <!-- ==================== Start Footer ==================== -->
+
+    <footer class="sub-bg">
+        <div class="footer-container">
+            <div class="container pb-80 pt-80 ontop">
+                <div class="call-box text-center mb-80">
+                    <h2>
+                        <a href="contect.html">Let's <span class="stroke"> Discuss</span></a>
+                        <span class="arrow">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="colum md-mb50">
+                            <div class="tit mb-20">
+                                <h6>Address</h6>
+                            </div>
+                            <div class="text">
+                                <p>E-7 midc, Navapur, Dhule, Maharashtra - 425418.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="colum md-mb50">
+                            <div class="tit mb-20">
+                                <h6>Say Hello</h6>
+                            </div>
+                            <div class="text">
+                                <p class="mb-5">
+                                    <a href="mailto:sales@krishnatextiles.in"><span class="__cf_email__">sales@krishnatextiles.in</span></a> <br>
+                                     </p>
+                                <div class="d-flex gap-2">
+                                    <div class="phone fw-200 ">
+                                        <a href="#">+91 96243 41246 <br>
+                                            </a>
+                                    </div>
+                                    <div class="phone fw-200">
+                                        <span> - Kuldip Patel</span><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="tit mb-20">
+                            <h6>Join Our Team Just One Click.</h6>
+                        </div>
+                        <div class="subscribe">
+                            <form action="#a">
+                                <div class="form-group rest">
+                                    <p>Start growing your Career with Krishna Textiles today !!</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer pt-10 pb-10 bord-thin-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="logo">
+                                <a href="#0">
+                                    <h4 class="fw-800 stroke">Krishna Textiles</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="copyright d-flex">
+                                <div class="ml-auto pt-15">
+                                    <p class="fz-13">© 2025 All Rights Reserved by <span class="underline"><a
+                                                href="#" target="_blank">Krishna Textiles</a></span>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== End Footer ==================== -->
+
+    <!-- jQuery -->
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
+
+    <!-- plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="assets/js/scripts.js"></script>
+
+    <!-- Video Carousel Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Video carousel functionality
+    const slides = document.querySelectorAll('.video-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+    
+    // Set interval for automatic slide change
+    let slideInterval = setInterval(nextSlide, 8000);
+    
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    
+    // Add click events to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            
+            // Restart the interval
+            slideInterval = setInterval(nextSlide, 8000);
+        });
+    });
+    
+    // Pause videos when not visible
+    function handleVideoVisibility() {
+        slides.forEach((slide, index) => {
+            const video = slide.querySelector('video');
+            if (index === currentSlide) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    }
+    
+    // Call initially and on slide change
+    handleVideoVisibility();
+    slides.forEach(slide => {
+        slide.addEventListener('transitionend', handleVideoVisibility);
+    });
+});</script>
